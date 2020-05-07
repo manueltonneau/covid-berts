@@ -2,7 +2,7 @@
 
 This repository contains information on two BERT versions pretrained on a preprocessed version of the [CORD-19](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) dataset, namely **ClinicalCovidBERT** and **BioCovidBERT**. Our models were trained to improve the quality of sentence embeddings produced from corona-related scientific articles and therefore improve the performance of our search tool based on these articles (link). This project was inspired by the `covid_bert_base` [model](https://huggingface.co/deepset/covid_bert_base) from Deepset and [discussions](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge/discussion/138250) on potential improvements of this model on Kaggle. The TensorFlow code from the [official BERT repository](https://github.com/google-research/bert) was used for training.
 
-![Illustration](illustration_clash_covid.png)
+![Illustration](clash_covid.png)
 
 
 ## ClinicalCovidBERT 
