@@ -56,6 +56,10 @@ This repository contains information on two BERT versions pretrained on a prepro
 
 ### Data preprocessing
 
+**TO DO**: The preprocessing script in the `preprocessing` folder. To download the data and preprocess it, use the `preprocessing.sh` script by running in the Terminal:
+- `chmod +x clash_covid/preprocessing/preprocessing.sh`
+- `./clash_covid/preprocessing/preprocessing.sh` 
+
 ## References
 
 Emily Alsentzer, John Murphy, William Boag, Wei-Hung Weng, Di Jin, Tristan Naumann, and Matthew McDermott. 2019. Publicly available clinical BERT embeddings. In Proceedings of the 2nd Clinical Natural Language Processing Workshop, pages 72-78, Minneapolis, Minnesota, USA. Association for Computational Linguistics.
