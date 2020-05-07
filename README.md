@@ -1,8 +1,10 @@
 # Covid-BERTs
 
-This repository contains information on two BERT versions pretrained on a preprocessed version of the [CORD-19](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) dataset, namely **ClinicalCovidBERT** and **BioCovidBERT**. Our models were trained to improve the quality of sentence embeddings produced from corona-related scientific articles and therefore improve the performance of our search tool based on these articles (link). The TensorFlow code from the [official BERT repository](https://github.com/google-research/bert) was used for training.
+This repository contains information on two BERT versions pretrained on a preprocessed version of the [CORD-19](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) dataset, namely **ClinicalCovidBERT** and **BioCovidBERT**. Our models were trained to improve the quality of sentence embeddings produced from corona-related scientific articles and therefore improve the performance of our search tool based on these articles (link). 
 
 ![Illustration](clash_covid.png)
+
+## Contribution
 
  This project was inspired by the `covid_bert_base` [model](https://huggingface.co/deepset/covid_bert_base) from Deepset and [discussions](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge/discussion/138250) on potential improvements of this model on Kaggle. Our contribution is based on two pillars:
 - better initialization: we initialize the training with existing BERT versions trained on scientific corpuses, namely [ClinicalBERT](https://github.com/EmilyAlsentzer/clinicalBERT) and [BioBERT](https://github.com/dmis-lab/biobert).
@@ -62,6 +64,12 @@ This repository contains information on two BERT versions pretrained on a prepro
 **TO DO**: The preprocessing script in the `preprocessing` folder. To download the data and preprocess it, use the `preprocessing.sh` script by running in the Terminal:
 - `chmod +x clash_covid/preprocessing/preprocessing.sh`
 - `./clash_covid/preprocessing/preprocessing.sh` 
+
+### Training instructions
+
+**TO DO: **
+
+The TensorFlow code from the [official BERT repository](https://github.com/google-research/bert) was used for training.
 
 ## References
 
