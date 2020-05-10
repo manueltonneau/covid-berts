@@ -29,11 +29,6 @@ This repository contains information on two BERT versions pretrained on a prepro
   - `num_warmup_steps`: 10000
   - `learning_rate`: 2e-5
 
-### Download
-
-### Usage 
-- Transformers library
-- how to produce embeddings 
 
 ## BioCovidBERT
 
@@ -53,9 +48,16 @@ This repository contains information on two BERT versions pretrained on a prepro
   - `num_warmup_steps`: 10000
   - `learning_rate`: 2e-5
   
-### Download 
+## Download
 
-### Usage
+| Model                            | Downloads
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------
+| `clinicalcovid_bert_base_cased`   | [`config.json`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/bert_config.json) • [`tensorflow weights`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.ckpt.data-00000-of-00001) • [`tensorflow meta`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.ckpt.meta) • [`tensorflow index`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.ckpt.index) • [`pytorch_model.bin`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.bin) • [`vocab.txt`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/vocab.txt)
+| `biocovid_bert_large_cased` | [`config.json`]() • [`tensorflow weights`]() • [`tensorflow meta`]() • [`tensorflow index`]() • [`pytorch_model.bin`]() • [`vocab.txt`]()
+
+## Usage 
+- Transformers library
+- how to produce embeddings 
 
 ## Train your own model 
 
