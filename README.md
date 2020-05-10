@@ -1,14 +1,14 @@
 # Covid-BERTs
 
-This repository contains information on two BERT versions pretrained on a preprocessed version of the [CORD-19](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) dataset, namely **ClinicalCovidBERT** and **BioCovidBERT**. Our models were trained to improve the quality of sentence embeddings produced from corona-related scientific articles and therefore improve the performance of our search tool based on these articles (link). 
+This repository contains information on two BERT versions pretrained on a preprocessed version of the [CORD-19](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) dataset, namely **ClinicalCovidBERT** and **BioCovidBERT**. 
 
 ![Illustration](clash_covid.png)
 
 ## Contribution
 
- This project was inspired by the `covid_bert_base` [model](https://huggingface.co/deepset/covid_bert_base) from Deepset and [discussions](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge/discussion/138250) on potential improvements of this model on Kaggle. Our contribution is based on two pillars:
+ This project was inspired by the `covid_bert_base` [model](https://huggingface.co/deepset/covid_bert_base) from Deepset and [discussions](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge/discussion/138250) on potential improvements of this model on Kaggle. My contribution is based on two pillars:
 - better initialization: we initialize the training with existing BERT versions trained on scientific corpuses, namely [ClinicalBERT](https://github.com/EmilyAlsentzer/clinicalBERT) and [BioBERT](https://github.com/dmis-lab/biobert).
-- specialized vocabulary: for one of our two models, we also use a customized vocabulary provided on the [BioBERT repository](https://github.com/dmis-lab/biobert) and use for training [BioBERT-Large v1.1 (+ PubMed 1M)](https://github.com/dmis-lab/biobert)
+- specialized vocabulary: for one of the two models, we also use a customized vocabulary provided on the [BioBERT repository](https://github.com/dmis-lab/biobert) and use for training [BioBERT-Large v1.1 (+ PubMed 1M)](https://github.com/dmis-lab/biobert)
 
 ## ClinicalCovidBERT 
 
