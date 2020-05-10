@@ -42,9 +42,6 @@ This repository contains information on two BERT versions pretrained on a prepro
   - `num_warmup_steps`: 10000
   - `learning_rate`: 2e-5
 
-
-## Model and training description 
-
 ### BioCovidBERT
 - BERT large default configuration
 - Cased 
