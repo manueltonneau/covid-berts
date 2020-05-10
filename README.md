@@ -4,15 +4,28 @@ This repository contains information on two BERT versions pretrained on a prepro
 
 ![Illustration](clash_covid.png)
 
+
 ## Contribution
 
  This project was inspired by the `covid_bert_base` [model](https://huggingface.co/deepset/covid_bert_base) from Deepset and [discussions](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge/discussion/138250) on potential improvements of this model on Kaggle. My contribution is based on two pillars:
 - better initialization: we initialize the training with existing BERT versions trained on scientific corpuses, namely [ClinicalBERT](https://github.com/EmilyAlsentzer/clinicalBERT) and [BioBERT](https://github.com/dmis-lab/biobert).
 - specialized vocabulary: for one of the two models, we also use a customized vocabulary provided on the [BioBERT repository](https://github.com/dmis-lab/biobert) and use for training [BioBERT-Large v1.1 (+ PubMed 1M)](https://github.com/dmis-lab/biobert)
 
-## ClinicalCovidBERT 
+## Download
 
-### Model and training description
+| Model                            | Downloads
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------
+| `clinicalcovid_bert_base_cased`   | [`config.json`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/bert_config.json) • [`tensorflow weights`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.ckpt.data-00000-of-00001) • [`tensorflow.meta`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.ckpt.meta) • [`tensorflow.index`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.ckpt.index) • [`pytorch_model.bin`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.bin) • [`vocab.txt`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/vocab.txt)
+| `biocovid_bert_large_cased` | [`config.json`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid_bert/bert_config_bio_58k_large.json) • [`tensorflow weights`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid_bert/biocovid_bert_large_cased.ckpt.data-00000-of-00001) • [`tensorflow.meta`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid_bert/biocovid_bert_large_cased.ckpt.meta) • [`tensorflow.index`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid_bert/biocovid_bert_large_cased.ckpt.index) • [`pytorch_model.bin`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid_bert/biocovid_bert.bin) • [`vocab.txt`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid_bert/vocab_cased_pubmed_pmc_30k.txt)
+
+## Usage 
+- Transformers library
+- how to produce embeddings 
+
+
+## Model and training description
+
+### ClinicalCovidBERT 
 - BERT base default configuration
 - Cased 
 - Initialized from [Bio+Clinical BERT](https://github.com/EmilyAlsentzer/clinicalBERT)
@@ -30,9 +43,9 @@ This repository contains information on two BERT versions pretrained on a prepro
   - `learning_rate`: 2e-5
 
 
-## BioCovidBERT
+## Model and training description 
 
-### Model and training description
+### BioCovidBERT
 - BERT large default configuration
 - Cased 
 - Initialized from [BioBERT-Large v1.1 (+ PubMed 1M)](https://github.com/dmis-lab/biobert) using their custom 30k vocabulary
@@ -48,16 +61,7 @@ This repository contains information on two BERT versions pretrained on a prepro
   - `num_warmup_steps`: 10000
   - `learning_rate`: 2e-5
   
-## Download
 
-| Model                            | Downloads
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------
-| `clinicalcovid_bert_base_cased`   | [`config.json`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/bert_config.json) • [`tensorflow weights`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.ckpt.data-00000-of-00001) • [`tensorflow meta`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.ckpt.meta) • [`tensorflow index`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.ckpt.index) • [`pytorch_model.bin`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/clinicalcovid_bert_base_cased.bin) • [`vocab.txt`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid_bert/vocab.txt)
-| `biocovid_bert_large_cased` | [`config.json`]() • [`tensorflow weights`]() • [`tensorflow meta`]() • [`tensorflow index`]() • [`pytorch_model.bin`]() • [`vocab.txt`]()
-
-## Usage 
-- Transformers library
-- how to produce embeddings 
 
 ## Train your own model 
 
