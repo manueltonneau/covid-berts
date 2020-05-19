@@ -7,9 +7,9 @@ This repository contains information on two BERT versions pretrained on a prepro
 
 ## Contribution
 
- This project was inspired by the `covid_bert_base` [model](https://huggingface.co/deepset/covid_bert_base) from Deepset and [discussions](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge/discussion/138250) on potential improvements of this model on Kaggle. My contribution is based on two pillars:
-- better initialization: we initialize the training with existing BERT versions trained on scientific corpuses, namely [ClinicalBERT](https://github.com/EmilyAlsentzer/clinicalBERT) and [BioBERT](https://github.com/dmis-lab/biobert).
-- specialized vocabulary: for one of the two models, we also use a customized vocabulary provided on the [BioBERT repository](https://github.com/dmis-lab/biobert) and use for training [BioBERT-Large v1.1 (+ PubMed 1M)](https://github.com/dmis-lab/biobert)
+ This project was inspired by the `covid_bert_base` [model](https://huggingface.co/deepset/covid_bert_base) from Deepset and [discussions](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge/discussion/138250) on potential improvements of this model on Kaggle. The contribution of this project is based on two pillars:
+- better initialization: the training is initialized with existing BERT versions trained on scientific corpuses, namely [ClinicalBERT](https://github.com/EmilyAlsentzer/clinicalBERT) and [BioBERT](https://github.com/dmis-lab/biobert).
+- specialized vocabulary: the customized vocabulary provided on the [BioBERT repository](https://github.com/dmis-lab/biobert), used for training [BioBERT-Large v1.1 (+ PubMed 1M)](https://github.com/dmis-lab/biobert), is used to train `biocovid-bert-large-cased`. 
 
 ## Download
 
@@ -18,14 +18,13 @@ This repository contains information on two BERT versions pretrained on a prepro
 | `clinicalcovid-bert-base-cased`   | [`config.json`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid-bert-base-cased/config.json) • [`tensorflow model`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid-bert-base-cased/clinicalcovid_bert_base_cased.ckpt.zip) • [`pytorch_model.bin`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid-bert-base-cased/clinicalcovid_bert_base_cased.bin) • [`vocab.txt`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/clinicalcovid-bert-base-cased/vocab.txt)
 | `biocovid-bert-large-cased` | [`config.json`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid-bert-large-cased/config.json) • [`tensorflow model`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid-bert-large-cased/biocovid_bert_large_cased.ckpt.zip) • [`pytorch_model.bin`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid-bert-large-cased/biocovid_bert.bin) • [`vocab.txt`](https://s3.amazonaws.com/models.huggingface.co/bert/mananeau/biocovid-bert-large-cased/vocab_cased_pubmed_pmc_30k.txt)
 
-## Usage 
-- Transformers library
-- how to produce embeddings 
 
 
-## Model and training description
 
-### ClinicalCovidBERT 
+## ClinicalCovidBERT 
+
+### Model and training description
+
 - BERT base default configuration
 - Cased 
 - Initialized from [Bio+Clinical BERT](https://github.com/EmilyAlsentzer/clinicalBERT)
@@ -42,7 +41,18 @@ This repository contains information on two BERT versions pretrained on a prepro
   - `num_warmup_steps`: 10000
   - `learning_rate`: 2e-5
 
-### BioCovidBERT
+### Usage
+
+```python
+from transformers import AutoTokenizer, AutoModel
+tokenizer = AutoTokenizer.from_pretrained("mananeau/clinicalcovid-bert-base-cased")
+model = AutoModel.from_pretrained("mananeau/clinicalcovid-bert-base-cased")
+```
+
+## BioCovidBERT
+
+### Model and training description
+
 - BERT large default configuration
 - Cased 
 - Initialized from [BioBERT-Large v1.1 (+ PubMed 1M)](https://github.com/dmis-lab/biobert) using their custom 30k vocabulary
@@ -58,7 +68,13 @@ This repository contains information on two BERT versions pretrained on a prepro
   - `num_warmup_steps`: 10000
   - `learning_rate`: 2e-5
   
+### Usage
 
+```python
+from transformers import AutoTokenizer, AutoModel
+tokenizer = AutoTokenizer.from_pretrained("mananeau/biocovid-bert-large-cased")
+model = AutoModel.from_pretrained("mananeau/biocovid-bert-large-cased")
+```
 
 ## Train your own model 
 
