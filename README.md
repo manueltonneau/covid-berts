@@ -31,7 +31,6 @@ This repository contains information on two BERT versions pretrained on a prepro
 - Using English `bert_base_cased` default vocabulary
 - Using whole-word masking
 - Pretrained on a preprocessed version of the CORD-19 dataset including titles, abstract and body text (approx. 1.5GB)
-- The model was trained for X hours on one TPU v3-8.
 - Tensorboard link
 - Training parameters:
   - `train_batch_size`: 512
@@ -58,7 +57,6 @@ model = AutoModel.from_pretrained("mananeau/clinicalcovid-bert-base-cased")
 - Initialized from [BioBERT-Large v1.1 (+ PubMed 1M)](https://github.com/dmis-lab/biobert) using their custom 30k vocabulary
 - Using whole-word masking
 - Pretrained on the same preprocessed version of the CORD-19 dataset including titles, abstract and body text (approx. 1.5GB)
-- The model was trained for X hours on one TPU v3-8
 - Tensorboard link
 - Training parameters:
   - `train_batch_size`: 512
@@ -76,19 +74,6 @@ tokenizer = AutoTokenizer.from_pretrained("mananeau/biocovid-bert-large-cased")
 model = AutoModel.from_pretrained("mananeau/biocovid-bert-large-cased")
 ```
 
-## Train your own model 
-
-### Data preprocessing
-
-**TO DO**: The preprocessing script in the `preprocessing` folder. To download the data and preprocess it, use the `preprocessing.sh` script by running in the Terminal:
-- `chmod +x clash_covid/preprocessing/preprocessing.sh`
-- `./clash_covid/preprocessing/preprocessing.sh` 
-
-### Training instructions
-
-**TO DO: **
-
-The TensorFlow code from the [official BERT repository](https://github.com/google-research/bert) was used for training.
 
 ## References
 
