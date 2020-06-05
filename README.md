@@ -44,8 +44,8 @@ This repository contains information on two BERT versions pretrained on a prepro
 
 ```python
 from transformers import AutoTokenizer, AutoModel
-tokenizer = AutoTokenizer.from_pretrained("mananeau/clinicalcovid-bert-base-cased")
-model = AutoModel.from_pretrained("mananeau/clinicalcovid-bert-base-cased")
+tokenizer = AutoTokenizer.from_pretrained("manueltonneau/clinicalcovid-bert-base-cased")
+model = AutoModel.from_pretrained("manueltonneau/clinicalcovid-bert-base-cased")
 ```
 
 ## BioCovidBERT
@@ -70,8 +70,8 @@ model = AutoModel.from_pretrained("mananeau/clinicalcovid-bert-base-cased")
 
 ```python
 from transformers import AutoTokenizer, AutoModel
-tokenizer = AutoTokenizer.from_pretrained("mananeau/biocovid-bert-large-cased")
-model = AutoModel.from_pretrained("mananeau/biocovid-bert-large-cased")
+tokenizer = AutoTokenizer.from_pretrained("manueltonneau/biocovid-bert-large-cased")
+model = AutoModel.from_pretrained("manueltonneau/biocovid-bert-large-cased")
 ```
 
 
