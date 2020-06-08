@@ -31,7 +31,6 @@ This repository contains information on two BERT versions pretrained on a prepro
 - Using English `bert_base_cased` default vocabulary
 - Using whole-word masking
 - Pretrained on a preprocessed version of the CORD-19 dataset including titles, abstract and body text (approx. 1.5GB)
-- Tensorboard link
 - Training parameters:
   - `train_batch_size`: 512
   - `max_seq_length`: 128
@@ -57,7 +56,6 @@ model = AutoModel.from_pretrained("manueltonneau/clinicalcovid-bert-base-cased")
 - Initialized from [BioBERT-Large v1.1 (+ PubMed 1M)](https://github.com/dmis-lab/biobert) using their custom 30k vocabulary
 - Using whole-word masking
 - Pretrained on the same preprocessed version of the CORD-19 dataset including titles, abstract and body text (approx. 1.5GB)
-- Tensorboard link
 - Training parameters:
   - `train_batch_size`: 512
   - `max_seq_length`: 128
